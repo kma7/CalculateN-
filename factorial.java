@@ -8,3 +8,9 @@ public int factorial(int n){
   }
   return n * factorial(n - 1);
 }
+//Test cases would be:
+/*
+1, lower edge cases: 0, 1
+2, normal input: 5, 6
+3. upper edge cases: 13, 14, 15
+*/
