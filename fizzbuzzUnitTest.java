@@ -5,17 +5,23 @@ public class FizzBuzz {
 		input = new Scanner(System.in);
 		System.out.print("Input an integer: ");
 		int n = input.nextInt();
-		//I tried to put a condition check whether n < 1, but I failed how to set input as 0 from Junit test case.
-		//Could you please help me out?
+		/*
+		I tried to check whether n < 1 here like:
+		if(n < 1){
+		    System.out.print("Illegal input. Please input a new one: ");
+		    n = input.nextInt();
+		}
+		but I failed how to set input as 0 from Junit test case.Could you please help me out?
+		*/
 		FizzBuzz myFB = new FizzBuzz();
 		myFB.fizzbuzz(n);
 	}
 	public void fizzbuzz(int n){
 		if(n < 1){
-			System.out.print("Illegal input.");
+		    System.out.print("Illegal input.");
 		}
 		for(int i = 1; i <= n; i++){
-			if(i % 15 == 0){
+		    if(i % 15 == 0){
 		      System.out.println("fizzbuzz");
 		    }else if(i % 5 == 0){
 		      System.out.println("buzz");
