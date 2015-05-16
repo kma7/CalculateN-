@@ -11,6 +11,6 @@ public class test{
   @Test
   public void test(){
     int result = MyClass.factorial(1);
-    assertsEquals(result, 1);
+    assertEquals(result, 1);
   }
 }
