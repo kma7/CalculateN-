@@ -18,15 +18,17 @@ public class FizzBuzz {
 	}
 	public void fizzbuzz(int n){
 		if(n < 1){
-		    System.out.print("Illegal input.");
+		      System.out.print("Illegal input.");
 		}
 		for(int i = 1; i <= n; i++){
-		    if(i % 15 == 0){
-		      System.out.println("fizzbuzz");
+			if(i % 15 == 0){
+		      System.out.print("fizzbuzz ");
 		    }else if(i % 5 == 0){
-		      System.out.println("buzz");
+		      System.out.print("buzz ");
 		    }else if(i % 3 == 0){
-		      System.out.println("fizz");
+		      System.out.print("fizz ");
+		    }else{
+		    	System.out.print(i + " ");
 		    }
 		}
 	}
@@ -68,18 +70,18 @@ public class TestNormal {
 	public void test3() {
 		FizzBuzz myFB = new FizzBuzz();
 		myFB.fizzbuzz(3);
-		assertEquals("fizz\n", outContent.toString());
+		assertEquals("1 2 fizz ", outContent.toString());
 	}
 	@Test
 	public void test5() {
 		FizzBuzz myFB = new FizzBuzz();
 		myFB.fizzbuzz(5);
-		assertEquals("fizz\nbuzz\n", outContent.toString());
+		assertEquals("1 2 fizz 4 buzz ", outContent.toString());
 	}
 	@Test
 	public void test15() {
 		FizzBuzz myFB = new FizzBuzz();
 		myFB.fizzbuzz(15);
-		assertEquals("fizz\nbuzz\nfizz\nfizz\nbuzz\nfizz\nfizzbuzz\n", outContent.toString());
+		assertEquals("1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz ", outContent.toString());
 	}
 }
