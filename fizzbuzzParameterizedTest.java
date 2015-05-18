@@ -10,9 +10,8 @@ public class FizzBuzz {
 
 	public String fizzbuzz(int n){
 		if(n < 1){
-			System.out.print("Illegal input.");
-		}
-		if(n % 15 == 0){
+			return "Illegal input.";
+		}else if(n % 15 == 0){
 	      		return "fizzbuzz";
 	    	}else if(n % 5 == 0){
 			return "buzz";
@@ -41,10 +40,11 @@ public class NewTest {
 	@Parameterized.Parameters
 	public static Collection<Object[]> fb(){
 		return Arrays.asList(new Object[][]{
-				{1, "1"},
-				{3, "fizz"},
-				{5, "buzz"},
-				{15, "fizzbuzz"}
+			{0, "Illegal input."},
+			{1, "1"},
+			{3, "fizz"},
+			{5, "buzz"},
+			{15, "fizzbuzz"}
 		});
 	}
 	@Test
