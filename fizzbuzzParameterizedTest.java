@@ -13,14 +13,14 @@ public class FizzBuzz {
 			System.out.print("Illegal input.");
 		}
 		if(n % 15 == 0){
-	      return "fizzbuzz";
-	    }else if(n % 5 == 0){
-	      return "buzz";
-	    }else if(n % 3 == 0){
-	      return "fizz";
-	    }else{
-	    	return String.valueOf(n);
-	    }
+	      		return "fizzbuzz";
+	    	}else if(n % 5 == 0){
+			return "buzz";
+	    	}else if(n % 3 == 0){
+	      		return "fizz";
+	    	}else{
+	    		return String.valueOf(n);
+	    	}
 	}
 }
 //Parameterized Test
